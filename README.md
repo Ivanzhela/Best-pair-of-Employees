@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Pair of Employees Who Have Worked Together
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is designed to identify the pair of employees who have worked together on common projects for the longest period of time. The input data is provided in a CSV file with the following format: EmpID, ProjectID, DateFrom, DateTo.
 
-## Available Scripts
+## Input Data
 
-In the project directory, you can run:
+The input data should be provided in a CSV file, where each row represents an employee's project assignment. The CSV file should have the following columns:
 
-### `npm start`
+* EmpID: Employee I
+* ProjectID: Project ID
+* DateFrom: Start date of the project assignment
+* DateTo: End date of the project assignment or NULL if it is equivalent to today
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Here is an example of the input data format:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```csv
+    1, 10, 2023-04-19T12:30:00, May 21 2023 12:30:00
+    2, 10, 04/19/2023, 1684616400000
+    3, 20, 19 April 2023, 2023-05-20T12:00:00Z
+    4, 20, May 19 2023 12:30:00, NULL
+    1, 30, 19 May 2023, NULL
+    2, 30, January 25 2015, 2023-05-21
+````
+### Note
 
-### `npm test`
+The application supports multiple date formats for the input data. It can handle different date formats in the DateFrom and DateTo columns.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## User Interface
 
-### `npm run build`
+The application provides a user interface (UI) that allows the user to select the input CSV file. After selecting the file, the application will display the common projects of the employee pair in a datagrid with the following columns:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Employee ID #1: Employee ID of the first employee in the pair
+* Employee ID #2: Employee ID of the second employee in the pair
+* Project ID: ID of the common project
+* Days worked: Number of days the pair has worked together on the common project
