@@ -33,3 +33,18 @@ The application provides a user interface (UI) that allows the user to select th
 * Employee ID #2: Employee ID of the second employee in the pair
 * Project ID: ID of the common project
 * Days worked: Number of days the pair has worked together on the common project
+
+
+## Architecture
+
+```bash
+├───public
+├───src
+│   ├───components
+│   │   ├───home
+│   │   ├───Table
+│   │   │   ├───Row
+│   │   │   │   └───Cell
+│   └───hooks
+└───────────────────────
+```
