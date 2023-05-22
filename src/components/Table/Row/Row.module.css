@@ -1,0 +1,36 @@
+.row {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr);
+}
+
+.row-number {
+    display: grid;
+    grid-template-columns: auto;
+    font-size: 14px;
+}
+
+.row-number .cell {
+    border: 1px solid #f1f1f1;
+    text-align: center;
+    background-color: #dfdfdf;
+}
+
+.row:nth-child(even) {
+    background-color: #ececec;
+}
+
+.header {
+    background-color: #eefbff;
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 480px) {
+
+    .header {
+        font-size: 10px;
+    }
+
+}

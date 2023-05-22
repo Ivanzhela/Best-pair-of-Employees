@@ -1,0 +1,41 @@
+.table {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-height: 300px;
+    overflow: auto;
+    text-align: start;
+}
+
+.footer {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 40px repeat(4, 1fr);
+    border: 1px solid #f1f1f1;
+    background-color: #dfdfdf;
+}
+
+.footer div {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    padding: 10px;
+}
+
+.footer .total-days {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    padding: 10px;
+    text-align: start;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+
+    .table {
+        font-size: 12px;
+    }
+
+}
